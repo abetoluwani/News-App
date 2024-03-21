@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'Config/Theme.dart';
+import 'HomePageController.dart';
 
 
 void main() {
