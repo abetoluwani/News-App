@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:news_app/Model/NewsModel.dart';
 
 class NewsController extends GetxController {
-  RxList<NewsModel> trandingNewsList = <NewsModel>[].obs;
+  RxList<NewsModel> trendinNewList = <NewsModel>[].obs;
   RxList<NewsModel> newsForYouList = <NewsModel>[].obs;
   RxList<NewsModel> searchNewsList = <NewsModel>[].obs;
   RxList<NewsModel> newsForYou5 = <NewsModel>[].obs;
@@ -44,7 +44,7 @@ class NewsController extends GetxController {
         var body = jsonDecode(response.body);
         var articals = body["articles"];
         for (var news in articals) {
-          trandingNewsList.add(NewsModel.fromJson(news));
+          trendinNewList.add(NewsModel.fromJson(news));
         }
       } else {
         print("Something went Wrong in Trending News");

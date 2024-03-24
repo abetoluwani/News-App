@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
               SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Obx(
-                    () => newsController.isTrandingLoading.value
+                    () => newsController.isTrendingLoading.value
                         ? const Row(
                             children: [
                               TrandingLoadingCard(),
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                             ],
                           )
                         : Row(
-                            children: newsController.trandingNewsList
+                            children: newsController.trendinNewList
                                 .map(
                                   (e) => TrandingCard(
                                     ontap: () {
